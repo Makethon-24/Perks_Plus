@@ -1,8 +1,8 @@
-# Install script for directory: /home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/linux
+# Install script for directory: /home/princi/Desktop/Perks_Plus/Perks_frontend/linux
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle")
+  set(CMAKE_INSTALL_PREFIX "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,95 +39,95 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   
-  file(REMOVE_RECURSE "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/")
+  file(REMOVE_RECURSE "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/")
   
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus")
+  if(EXISTS "$ENV{DESTDIR}/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus"
+         FILE "$ENV{DESTDIR}/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus"
          RPATH "$ORIGIN/lib")
   endif()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus")
+   "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle" TYPE EXECUTABLE FILES "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/intermediates_do_not_run/perks_plus")
-  if(EXISTS "$ENV{DESTDIR}/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus")
+file(INSTALL DESTINATION "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle" TYPE EXECUTABLE FILES "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/intermediates_do_not_run/perks_plus")
+  if(EXISTS "$ENV{DESTDIR}/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus"
-         OLD_RPATH "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/linux/flutter/ephemeral:"
+         FILE "$ENV{DESTDIR}/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus"
+         OLD_RPATH "/home/princi/Desktop/Perks_Plus/Perks_frontend/linux/flutter/ephemeral:"
          NEW_RPATH "$ORIGIN/lib")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/snap/flutter/current/usr/bin/strip" "$ENV{DESTDIR}/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus")
+      execute_process(COMMAND "/snap/flutter/current/usr/bin/strip" "$ENV{DESTDIR}/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/perks_plus")
     endif()
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/data/icudtl.dat")
+   "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/data/icudtl.dat")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/data" TYPE FILE FILES "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/linux/flutter/ephemeral/icudtl.dat")
+file(INSTALL DESTINATION "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/data" TYPE FILE FILES "/home/princi/Desktop/Perks_Plus/Perks_frontend/linux/flutter/ephemeral/icudtl.dat")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so")
+   "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so")
+file(INSTALL DESTINATION "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/princi/Desktop/Perks_Plus/Perks_frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/lib/")
+   "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/lib/")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/lib" TYPE DIRECTORY FILES "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/native_assets/linux/")
+file(INSTALL DESTINATION "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/lib" TYPE DIRECTORY FILES "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/native_assets/linux/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   
-  file(REMOVE_RECURSE "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/data/flutter_assets")
+  file(REMOVE_RECURSE "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/data/flutter_assets")
   
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/data/flutter_assets")
+   "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/data/flutter_assets")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/data" TYPE DIRECTORY FILES "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build//flutter_assets")
+file(INSTALL DESTINATION "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle/data" TYPE DIRECTORY FILES "/home/princi/Desktop/Perks_Plus/Perks_frontend/build//flutter_assets")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/flutter/cmake_install.cmake")
+  include("/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/flutter/cmake_install.cmake")
 
 endif()
 
@@ -139,5 +139,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

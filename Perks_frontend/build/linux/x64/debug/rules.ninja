@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__perks_plus
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /snap/flutter/145/usr/bin/cmake -S/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/linux -B/home/patelkiran18/Desktop/Makethon/Perks_Plus/Perks_frontend/build/linux/x64/debug
+  command = /snap/flutter/145/usr/bin/cmake -S/home/princi/Desktop/Perks_Plus/Perks_frontend/linux -B/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug
   description = Re-running CMake...
   generator = 1
 
