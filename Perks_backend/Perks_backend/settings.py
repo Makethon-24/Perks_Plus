@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'perks',
 ]
 
@@ -69,7 +70,14 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Perks_backend.wsgi.application'
+#2-FA
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'perksplus7@gmail.com'
+EMAIL_HOST_PASSWORD = 'perksplus@123$'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

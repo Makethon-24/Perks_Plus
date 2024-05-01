@@ -1,0 +1,14 @@
+======================================================================
+post request for registration which is handled by admin to add users
+http://127.0.0.1:8000/register/
+{
+    "userid": "81252",
+    "password": "mypassword",
+    "phone_number": "1234567890",
+    "gmail": "jainprinci00@gmail.com",
+    "list_of_cards": [1, 0]
+}
+
+=====================================================================
+get request for login
+http://127.0.0.1:8000/login/?userid=81252&password=mypassword
