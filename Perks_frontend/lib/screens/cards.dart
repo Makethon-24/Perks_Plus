@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'dashboard-home.dart';
+
 class CardsPage extends StatefulWidget {
   @override
   _CardsPageState createState() => _CardsPageState();
@@ -58,7 +60,10 @@ class _CardsPageState extends State<CardsPage> {
                   padding: const EdgeInsets.all(10.0),
                   child: GestureDetector(
                     onTap: () {
-                      print("Card clicked");
+                      Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DashboardHome()), 
+                  );
                     },
                     child: Container(
                       height: 220,

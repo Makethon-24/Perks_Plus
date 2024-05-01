@@ -1,8 +1,8 @@
-# Install script for directory: /home/princi/Desktop/Perks_Plus/Perks_frontend/linux/flutter
+# Install script for directory: /home/patelkiran18/Desktop/Makethon/PERKSPLUS/Perks_Plus/Perks_frontend/linux/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/princi/Desktop/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle")
+  set(CMAKE_INSTALL_PREFIX "/home/patelkiran18/Desktop/Makethon/PERKSPLUS/Perks_Plus/Perks_frontend/build/linux/x64/debug/bundle")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
