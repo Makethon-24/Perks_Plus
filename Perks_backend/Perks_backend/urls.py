@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from perks.views import UserLogin, UserRegistration
+from perks.views import UserLogin, UserRegistration ,otp_verification
 urlpatterns = [
     path('register/', UserRegistration.as_view(),name='register'),
     path('login/', UserLogin.as_view(),name='login'),
+    path('otpverify/',otp_verification.as_view(),name='otpverify'),
     path('admin/', admin.site.urls),
 ]

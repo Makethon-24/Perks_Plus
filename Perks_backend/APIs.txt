@@ -1,4 +1,5 @@
 ======================================================================
+
 post request for registration which is handled by admin to add users
 http://127.0.0.1:8000/register/
 {
@@ -10,5 +11,13 @@ http://127.0.0.1:8000/register/
 }
 
 =====================================================================
-get request for login
+
+get request for login and to send otp
 http://127.0.0.1:8000/login/?userid=81252&password=mypassword
+
+=====================================================================
+
+get request for otp verification
+http://127.0.0.1:8000/otpverify/?userid=81252&otp=301544
+
+=====================================================================
