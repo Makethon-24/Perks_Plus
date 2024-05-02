@@ -17,66 +17,81 @@ class _DashboardHomeState extends State<DashboardHome> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xFFC2D7F1),
-      appBar: AppBar(
-        title: Text(
-          'Welcome XXX YYY',
-          style: TextStyle(color: Colors.white),
+    return Stack(
+      children: [
+        Scaffold(
+          backgroundColor: Color(0xFFC2D7F1),
+          appBar: AppBar(
+            title: Text(
+              'Welcome XXX YYY',
+              style: TextStyle(color: Colors.white),
+            ),
+            backgroundColor: Color(0xFF4E9FE5),
+          ),
+          body: PageView(
+            controller: _pageController,
+            onPageChanged: (index) {
+              setState(() {
+                _currentIndex = index;
+              });
+            },
+            children: [
+              Center(child: Text('Home')),
+              CreditPage(),
+              RewardPage(),
+              PlayPage(),
+              SettingPage(),
+            ],
+          ),
+          bottomNavigationBar: CurvedNavigationBar(
+            index: _currentIndex,
+            color: Color(0xFF4E9FE5),
+            backgroundColor: Colors.transparent,
+            buttonBackgroundColor: Colors.white,
+            animationDuration: Duration(milliseconds: 300),
+            onTap: (index) {
+              setState(() {
+                _currentIndex = index;
+              });
+              _pageController.animateToPage(index,
+                  duration: Duration(milliseconds: 300), curve: Curves.ease);
+            },
+            items: [
+              Column(mainAxisSize: MainAxisSize.min, children: [
+                Icon(Icons.home, size: 28),
+                Text('Home', style: TextStyle(fontSize: 10))
+              ]),
+              Column(mainAxisSize: MainAxisSize.min, children: [
+                Icon(Icons.attach_money, size: 28),
+                Text('Credit', style: TextStyle(fontSize: 10))
+              ]),
+              Column(mainAxisSize: MainAxisSize.min, children: [
+                Icon(Icons.card_giftcard, size: 28),
+                Text('Rewards', style: TextStyle(fontSize: 10))
+              ]),
+              Column(mainAxisSize: MainAxisSize.min, children: [
+                Icon(Icons.leaderboard, size: 29),
+                Text('Play', style: TextStyle(fontSize: 10))
+              ]),
+              Column(mainAxisSize: MainAxisSize.min, children: [
+                Icon(Icons.settings, size: 28),
+                Text('Settings', style: TextStyle(fontSize: 10))
+              ]),
+            ],
+          ),
         ),
-        backgroundColor: Color(0xFF4E9FE5),
-      ),
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        children: [
-          Center(child: Text('Home')),
-          CreditPage(),
-          RewardPage(),
-          PlayPage(),
-          SettingPage(),
-        ],
-      ),
-      bottomNavigationBar: CurvedNavigationBar(
-        index: _currentIndex,
-        color: Color(0xFF4E9FE5),
-        backgroundColor: Colors.transparent,
-        buttonBackgroundColor: Colors.white,
-        animationDuration: Duration(milliseconds: 300),
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-          _pageController.animateToPage(index,
-              duration: Duration(milliseconds: 300), curve: Curves.ease);
-        },
-        items: [
-          Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(Icons.home, size: 28),
-            Text('Home', style: TextStyle(fontSize: 10))
-          ]),
-          Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(Icons.attach_money, size: 28),
-            Text('Credit', style: TextStyle(fontSize: 10))
-          ]),
-          Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(Icons.card_giftcard, size: 28),
-            Text('Rewards', style: TextStyle(fontSize: 10))
-          ]),
-          Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(Icons.leaderboard, size: 29),
-            Text('Play', style: TextStyle(fontSize: 10))
-          ]),
-          Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(Icons.settings, size: 28),
-            Text('Settings', style: TextStyle(fontSize: 10))
-          ]),
-        ],
-      ),
+        Positioned(
+          right: 10, 
+          bottom: 110, 
+          child: FloatingActionButton(
+            onPressed: () {
+              
+            },
+            child: Icon(Icons.calendar_today), 
+            backgroundColor: Color(0xFF4E9FE5), 
+          ),
+        ),
+      ],
     );
   }
 }
