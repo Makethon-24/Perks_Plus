@@ -1,11 +1,10 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-// import 'package:google_nav_bar/google_nav_bar.dart';
-import 'credit.dart'; 
-import 'reward.dart'; 
 
-import 'play.dart'; 
-import 'setting.dart'; 
-import '../utils/bottomnav.dart';
+import 'credit.dart';
+import 'play.dart';
+import 'reward.dart';
+import 'setting.dart';
 
 class DashboardHome extends StatefulWidget {
   @override
@@ -14,41 +13,7 @@ class DashboardHome extends StatefulWidget {
 
 class _DashboardHomeState extends State<DashboardHome> {
   int _currentIndex = 0;
-
-  void _navigateTo(int index) {
-    switch (index) {
-      case 0: 
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => DashboardHome()),
-        );
-        break;
-      case 1: 
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => CreditPage()),
-        );
-        break;
-      case 2: 
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => RewardPage()),
-        );
-        break;
-      case 3: 
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => PlayPage()),
-        );
-        break;
-      case 4: 
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => SettingPage()),
-        );
-        break;
-    }
-  }
+  final _pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -56,14 +21,61 @@ class _DashboardHomeState extends State<DashboardHome> {
       backgroundColor: Color(0xFFC2D7F1),
       appBar: AppBar(
         title: Text(
-          'Dashboard',
+          'Welcome XXX YYY',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Color(0xFF4E9FE5),
       ),
-      bottomNavigationBar: BottomNav(  // Replace this line
-        currentIndex: _currentIndex,
-        onTabChange: _navigateTo,
+      body: PageView(
+        controller: _pageController,
+        onPageChanged: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        children: [
+          Center(child: Text('Home')),
+          CreditPage(),
+          RewardPage(),
+          PlayPage(),
+          SettingPage(),
+        ],
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        index: _currentIndex,
+        color: Color(0xFF4E9FE5),
+        backgroundColor: Colors.transparent,
+        buttonBackgroundColor: Colors.white,
+        animationDuration: Duration(milliseconds: 300),
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+          _pageController.animateToPage(index,
+              duration: Duration(milliseconds: 300), curve: Curves.ease);
+        },
+        items: [
+          Column(mainAxisSize: MainAxisSize.min, children: [
+            Icon(Icons.home, size: 28),
+            Text('Home', style: TextStyle(fontSize: 10))
+          ]),
+          Column(mainAxisSize: MainAxisSize.min, children: [
+            Icon(Icons.attach_money, size: 28),
+            Text('Credit', style: TextStyle(fontSize: 10))
+          ]),
+          Column(mainAxisSize: MainAxisSize.min, children: [
+            Icon(Icons.card_giftcard, size: 28),
+            Text('Rewards', style: TextStyle(fontSize: 10))
+          ]),
+          Column(mainAxisSize: MainAxisSize.min, children: [
+            Icon(Icons.leaderboard, size: 29),
+            Text('Play', style: TextStyle(fontSize: 10))
+          ]),
+          Column(mainAxisSize: MainAxisSize.min, children: [
+            Icon(Icons.settings, size: 28),
+            Text('Settings', style: TextStyle(fontSize: 10))
+          ]),
+        ],
       ),
     );
   }
